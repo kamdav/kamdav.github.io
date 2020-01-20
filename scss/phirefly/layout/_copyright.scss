@@ -1,0 +1,12 @@
+.copyright {
+  color: darken($footer-font-color, 15%);
+  background: darken($primary-color, 12.5%);
+  padding: 20px 0;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 90%;
+
+  a {
+    color: $secondary-color;
+  }
+}

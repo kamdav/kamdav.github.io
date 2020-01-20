@@ -1,0 +1,32 @@
+//
+// Pricing
+//
+
+
+// Imported files //
+
+// Variables //
+
+// Mixins //
+
+// Styling //
+
+
+.icon-box-p {
+  width: 150px;
+  margin: 0 auto;
+  overflow: hidden;
+  i {
+    width: 20px;
+    float: left;
+    color: $secondary-color;
+    font-size: 30px;
+    line-height: 0;
+  }
+}
+
+.icon-box-content-p {
+  float: right;
+  width: 130px;
+  margin: 8px auto 0;
+}

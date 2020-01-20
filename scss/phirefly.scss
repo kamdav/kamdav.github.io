@@ -1,0 +1,67 @@
+// Make sure the charset is set appropriately
+@charset "UTF-8";
+
+// This includes all of the foundation global elements that are needed to work with any of the other files.
+@import "phirefly/variables";
+
+// Foundation Components
+@import
+  "phirefly/components/global",
+  "phirefly/components/grid",
+  "phirefly/components/visibility",
+  "phirefly/components/block-grid",
+  "phirefly/components/type",
+  "phirefly/components/buttons",
+  "phirefly/components/forms",
+  "phirefly/components/button-groups",
+  "phirefly/components/dropdown-buttons",
+  "phirefly/components/split-buttons",
+  "phirefly/components/flex-video",
+  "phirefly/components/section",
+  "phirefly/components/top-bar",
+  "phirefly/components/orbit",
+  "phirefly/components/reveal",
+  "phirefly/components/joyride",
+  "phirefly/components/clearing",
+  "phirefly/components/alert-boxes",
+  "phirefly/components/breadcrumbs",
+  "phirefly/components/custom-forms",
+  "phirefly/components/keystrokes",
+  "phirefly/components/labels",
+  "phirefly/components/inline-lists",
+  "phirefly/components/pagination",
+  "phirefly/components/panels",
+  "phirefly/components/pricing-tables",
+  "phirefly/components/progress-bars",
+  "phirefly/components/side-nav",
+  "phirefly/components/sub-nav",
+  "phirefly/components/switch",
+  "phirefly/components/magellan",
+  "phirefly/components/tables",
+  "phirefly/components/thumbs",
+  "phirefly/components/tooltips",
+  "phirefly/components/dropdown",
+  "phirefly/components/color-bar",
+  "phirefly/components/icon-box",
+  "phirefly/components/slider",
+  "phirefly/components/social-icons",
+  "phirefly/components/fp-blog",
+  "phirefly/components/testimonials",
+  "phirefly/components/highlight-box",
+  "phirefly/components/slogan",
+  "phirefly/components/some-bar",
+  "phirefly/components/back-to-top",
+  "phirefly/components/team",
+  "phirefly/components/about",
+  "phirefly/components/faq",
+  "phirefly/components/pricing",
+  "phirefly/components/contact",
+  "phirefly/components/services",
+  "phirefly/components/portfolio",
+  "phirefly/components/login";
+
+// Phirefly layout
+@import 
+  "phirefly/layout/header",
+  "phirefly/layout/footer",
+  "phirefly/layout/copyright";

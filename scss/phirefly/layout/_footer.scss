@@ -1,0 +1,106 @@
+//
+// Main footer
+//
+
+$footer-font-color: #eaeaea;
+$footer-font-weight: 400;
+
+.main-footer {
+  background: $primary-color;
+  color: $footer-font-color;
+  margin-top: 35px;
+  font-style: normal;
+  font-weight: $footer-font-weight;
+
+  a {
+    color: $footer-font-color;
+    text-decoration: none;
+    line-height: inherit;
+
+    &:hover,
+    &:focus { color: $secondary-color; }
+
+    img { border:none; }
+  }
+
+  ul {
+    list-style-type: none;
+    line-height: 1.8em;
+  }
+
+  h1,h2,h3,
+  h4,h5,h6 {
+    color: #fff;
+  }
+
+}
+
+.foo-right {
+  padding-top: 30px;
+}
+
+.foo-left {
+  display: table-cell;
+  padding-top: 30px;
+  text-align: center;
+  background: darken($primary-color, 10%);
+
+  address {
+    line-height: 25px;
+  }
+
+  hr {
+    border : 0;
+    height : 1px;
+    background : url(../img/hr.png) center no-repeat;
+    margin : 1em 0;
+  }
+}
+
+.foo-logo {
+  margin-bottom: 20px;
+}
+
+
+.latest-news {
+  span {
+    color: lighten($primary-color, 80%);
+    background: $secondary-color;
+    padding: 2px 7px;
+    margin-right: 6px;
+    line-height: 2.2;
+    @include radius(2px);
+  }
+}
+
+.twitter-update {
+  background: url(../img/twitter-nobg.png) top left no-repeat;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  span {
+    color: darken($footer-font-color, 25%);
+    padding: 4px 0;
+    display: block;
+    font-weight: 400;
+    a {
+      color: $secondary-color;
+      text-decoration: none;
+      line-height: inherit;
+
+      &:hover,
+      &:focus { color: darken($secondary-color, 5%); }
+    }
+  }
+}
+
+.foo-navis {
+  font-size: 85%;
+  padding: 25px 0;
+    a {
+      color: darken($footer-font-color, 25%);
+    }
+      &:hover,
+      &:focus { 
+        color: darken($secondary-color, 5%);
+    } 
+}

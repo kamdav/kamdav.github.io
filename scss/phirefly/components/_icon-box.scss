@@ -1,0 +1,20 @@
+//
+// Icon box
+//
+
+.icon-box {
+  margin-bottom: 35px;
+  overflow: hidden;
+  i {
+    float: left;
+    color: $secondary-color;
+    font-size: 40px;
+    line-height: 0;
+    padding-right: 15px;
+  }
+}
+
+.icon-box-content {
+  float: left;
+  width: 80%;
+}

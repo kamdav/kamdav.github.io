@@ -1,0 +1,22 @@
+//
+// Social Icons
+//
+
+
+.social-icons {
+  list-style-type: none;
+  cursor: pointer;
+  margin: 25px 0;
+  font-size: 35px;
+  background-image: url(..img/bean.jpg);
+
+  li {
+    display: inline-block;
+    margin: 0 10px;
+
+    a:hover {
+      color: $secondary-color;
+    }
+
+  }
+}

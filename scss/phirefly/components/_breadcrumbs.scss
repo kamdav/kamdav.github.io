@@ -1,0 +1,226 @@
+//
+// Breadcrumb Variables
+//
+$include-html-nav-classes: $include-html-classes !default;
+
+// We use this to set the background color for the breadcrumb container.
+$crumb-bg: #fff !default;
+
+// We use these to set the padding around the breadcrumbs.
+$crumb-padding: em-calc(12 0 0 10) !default;
+$crumb-side-padding: em-calc(12) !default;
+
+// We use these to control border styles.
+$crumb-function-factor: 10% !default;
+$crumb-border-size: 1px !default;
+$crumb-border-style: solid !default;
+$crumb-border-color: darken($crumb-bg, $crumb-function-factor) !default;
+$crumb-radius: $global-radius !default;
+
+// We use these to set various text styles for breadcrumbs.
+$crumb-font-size: em-calc(11) !default;
+$crumb-font-color: $primary-color !default;
+$crumb-font-color-current: #333 !default;
+$crumb-font-color-unavailable: #999 !default;
+$crumb-font-transform: uppercase !default;
+$crumb-link-decor: underline !default;
+
+// We use these to control the slash between breadcrumbs
+$crumb-slash-color: #aaa !default;
+$crumb-slash: "/" !default;
+
+//
+// Breakcrumb Mixins
+//
+
+// We use this mixin to create a container around our breadcrumbs
+@mixin crumb-container {
+  display: block;
+  padding: $crumb-padding;
+  overflow: hidden;
+  margin-#{$default-float}: 0;
+  list-style: none;
+  border-style: $crumb-border-style;
+  border-width: $crumb-border-size;
+  margin-bottom: 0px;
+
+  // We control which background color and border come through.
+  background-color: $crumb-bg;
+  border-color: $crumb-border-color;
+}
+
+// We use this mixin to create breadcrumb styles from list items.
+@mixin crumbs {
+
+  // A normal state will make the links look and act like clickable breadcrumbs.
+  margin: 0;
+  float: $default-float;
+  font-size: $crumb-font-size;
+  text-transform: $crumb-font-transform;
+
+  &:hover a, &:focus a { text-decoration: $crumb-link-decor; }
+
+  a,
+  span {
+    text-transform: $crumb-font-transform;
+    color: $crumb-font-color;
+  }
+
+  // Current is for the link of the current page
+  &.current {
+    cursor: $cursor-default-value;
+    color: $crumb-font-color-current;
+    a {
+      cursor: $cursor-default-value;
+      color: $crumb-font-color-current;
+    }
+
+    &:hover, &:hover a,
+    &:focus, &:focus a { text-decoration: none; }
+  }
+
+  // Unavailable removed color and link styles so it looks inactive.
+  &.unavailable {
+    color: $crumb-font-color-unavailable;
+    a { color: $crumb-font-color-unavailable; }
+
+    &:hover,
+    &:hover a,
+    &:focus,
+    a:focus {
+      text-decoration: none;
+      color: $crumb-font-color-unavailable;
+      cursor: $cursor-default-value;
+    }
+  }
+
+  &:before {
+    content: "#{$crumb-slash}";
+    color: $crumb-slash-color;
+    margin: 0 $crumb-side-padding;
+    position: relative;
+    top: 1px;
+  }
+
+  &:first-child:before {
+    content: " ";
+    margin: 0;
+  }
+
+}
+
+// Search
+.bread-links {
+  float: left;
+  list-style-type: none;
+  padding: 5px 0;
+}
+
+.search-box {
+  position: absolute;
+  right: 10px;
+  z-index: 2;
+  display: inline-block;
+  float: right;
+
+  .search-input,
+  .search-button {
+    margin: 0;
+    height: 30px;
+  }
+
+  .search-input {
+    display: none;
+    float: left;
+    width: 190px; 
+    padding: 2.5px 5px;
+    line-height: inherit;
+    border-width: 1px 0 1px 1px;
+    border-style: solid;
+    border-color: rgb(204, 204, 204);
+    @media #{$small} {
+      display: inline;
+    }
+  }
+}
+
+.search-button {
+  display: inline-block;
+  background: #fff;
+  color: #000;
+  cursor: pointer;
+  border: 1px solid rgb(204, 204, 204);
+  outline: none;
+
+  margin: 0;
+  padding: 0;
+
+  .fi-magnifying-glass {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 20px;
+    line-height: 0;
+    margin: 0;
+    padding: 4px 8px;
+    height: 100%;
+  
+    &:focus,
+    &:hover {
+      background: $secondary-color;
+    }
+  }
+}
+
+
+.search-box2 {
+  z-index: 2;
+  display: inline-block;
+
+  .search-input2,
+  .search-button2 {
+    margin: 0;
+    height: 30px;
+  }
+
+  .search-input2 {
+    display: none;
+    float: left;
+    width: 190px; 
+    padding: 2.5px 5px;
+    @media #{$small} {
+      display: inline;
+    }
+  }
+
+  .search-button2 {
+    float: right;
+    margin-left: 5px;
+    background: url(../img/other-icons/search.png) -3px -1px no-repeat;
+    background-size: 33px 33px;
+    cursor: pointer;
+    outline: 0;
+    border: none;
+    width: 30px;
+    border: 1px solid rgb(204, 204, 204);
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+
+@if $include-html-nav-classes != false {
+
+  /* Breadcrumbs */
+  .breadcrumbs {
+    @include crumb-container;
+  }
+
+  .bread-box {
+    &> ul li {
+      @include crumbs;
+    }
+  }
+
+}

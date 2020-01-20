@@ -1,0 +1,113 @@
+//
+// Team
+//
+
+
+// Imported files //
+@import "../layout/footer.scss";
+
+// Variables //
+
+// Mixins //
+
+// Styling //
+
+.t-title {
+  margin: 20px 0 40px;
+  text-align: center;
+  p {
+    color: lighten($body-font-color, 20%);
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0;
+  }
+}
+
+.c-info {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.team-info {
+  h5 {
+    margin-top: 32px;
+    font-size: 20px;
+    text-align: center;
+  }
+  h4 {
+    margin-top: -10px;
+    color: lighten($body-font-color, 20%);
+    font-size: 16px;
+    text-align: center;
+  }
+  p {
+    margin: 15px 10px 10px 20px;
+    text-align: center;
+    line-height: 22px;
+  }
+}
+
+.team-img {
+  text-align: center;
+  img {
+    height: 200px;
+    width: auto;
+    border-radius: 150px;
+  }
+}
+
+.team-social {
+  width: auto;
+  text-align: center;
+  ul li {
+    margin: 15px 5px;
+    height: 5px;
+  }
+  a {
+    color: darken(#f4f4f4, 1%);
+    text-decoration: none;
+    line-height: inherit;
+    text-shadow: 1px 2px 1px black;
+
+    &:hover,
+    &:focus { color: $secondary-color; }
+
+    img { border:none; }
+  }
+  img {
+    &:hover,
+    &:focus { opacity: 0.8; }
+  }
+}
+
+.social-icons2 {
+  padding: 1px;
+  margin-top: -95px;
+  font-size: 30px;
+}
+
+.social-icons2 {
+  width: 100%;
+  li:nth-child(2n+2) { 
+    vertical-align:top ;
+    margin: 55px -7px 0 -7px;
+  }
+  li:nth-child(3) {
+    vertical-align:top ;
+    margin-top: 70px;
+  }
+  li:nth-child(2) {
+    margin-right: 6px;
+  }
+  li:nth-child(4) {
+    margin-left: 6px;
+  }
+}
+
+.team-fb {
+
+}
+
+.p-line {
+  color: $secondary-color;
+}

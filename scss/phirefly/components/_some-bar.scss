@@ -1,0 +1,56 @@
+//
+// Social media bar
+//
+
+.some-bar {
+  background: $primary-color;
+  overflow: hidden;
+  margin-bottom: 10px;
+  @include single-transition(.2s);
+  
+  i {
+    font-size: 27px;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+    color: #fff;
+  }
+}
+
+.some-icon {
+  position: relative;
+  float: left;
+  background: $secondary-color;
+  padding: 5px 10px;
+
+    &:after {
+    left: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-left-color: #ce1b8c;
+    border-width: 5px;
+    margin-top: -5px;
+  }
+}
+
+.some-name {
+  float: right;
+  padding: 10px;
+  vertical-align: middle;
+  font-size: 12px;
+  font-weight: 300;
+
+  a {
+      color: #f2f2f2;
+
+      &:focus,
+      &:hover {
+        color: #ccc;
+      }
+  }
+}

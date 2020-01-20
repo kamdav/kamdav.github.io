@@ -1,0 +1,104 @@
+//
+// Login
+//
+
+$login-font-color: #f2f2f2;
+
+// Base style for login.
+// Change $bg:true to $bg:false for no background.
+@mixin login-base($bg:true) {
+  padding: 10px 10px 0;
+  background: $body-bg;
+  color: $body-font-color;
+
+  .login-button {
+    background: inherit;
+  }
+
+  .login-form {
+    color: $body-font-color;
+    &:after {
+      display: none;
+    }
+  }
+
+  // $bg:true apply following styles (default).
+  @if $bg {
+    background: $primary-color;
+    color: $login-font-color;
+
+    h5 {
+      color: $login-font-color;
+    }
+
+    .login-form {
+      &:after {
+        display: block;
+      }
+    }
+    
+    .login-button {
+      background: darken($primary-color, 8%);
+    }  
+
+  } 
+}
+
+.login {
+  @include login-base;
+}
+
+// Input area
+.login-form {
+  position: relative;
+  padding: 10px;
+
+  &:after {
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-top-color: $primary-color;
+    border-width: 15px;
+    margin-left: -15px;
+  }
+
+  form  {
+    margin-bottom: 0;
+
+    label {
+      color: darken($login-font-color, 15%);
+      font-size: 90%;
+      margin: 0;
+      padding: 0;
+    }
+
+    input[type=checkbox] {
+      margin: 0;
+    }
+  }
+
+}
+
+// Button area
+.login-button {
+  padding: 25px 20px 0px;
+  margin: 0 -10px;
+  text-align: center;
+
+  a {
+    display: block;
+    margin: 0;
+  }
+
+  .login-reset {
+    color: darken($login-font-color, 15%);
+    padding: 7px 0;
+    font-size: 85%;
+  }
+}
+

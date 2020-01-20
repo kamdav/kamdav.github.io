@@ -1,0 +1,77 @@
+//
+// Contact
+//
+
+
+// Imported files //
+
+// Variables //
+
+// Mixins //
+
+// Styling //
+
+.c-form-pos {
+  margin-top: 50px;
+}
+
+textarea {
+  height: 150px;
+}
+
+.msg {
+  h5 {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.send {
+  height: 30px;
+}
+
+.c-address {
+  margin: 25px 0px 35px 0px;
+  p {
+    font-size: 15px;
+  }
+}
+
+.c-follow {
+  font-size: 14px;
+}
+
+map.set('styles', [
+  {
+    featureType: 'road',
+    elementType: 'geometry',
+    stylers: [
+      { color: '#000000' },
+      { weight: 1.6 }
+    ]
+  }, {
+    featureType: 'road',
+    elementType: 'labels',
+    stylers: [
+      { saturation: -100 },
+      { invert_lightness: true }
+    ]
+  }, {
+    featureType: 'landscape',
+    elementType: 'geometry',
+    stylers: [
+      { hue: '#ffff00' },
+      { gamma: 1.4 },
+      { saturation: 82 },
+      { lightness: 96 }
+    ]
+  }, {
+    featureType: 'poi.school',
+    elementType: 'geometry',
+    stylers: [
+      { hue: '#fff700' },
+      { lightness: -15 },
+      { saturation: 99 }
+    ]
+  }
+]);

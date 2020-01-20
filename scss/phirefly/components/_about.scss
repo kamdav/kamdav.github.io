@@ -1,0 +1,71 @@
+//
+// About us
+//
+
+
+// Imported files //
+
+// Variables //
+
+// Mixins //
+@mixin text($f-size) {
+  color: $body-font-color;
+  font-size: $f-size;
+  margin: 0;
+}
+
+
+// Styling //
+
+.about-title {
+  margin: 20px 0 40px;
+  text-align: center;
+  p {
+    color: lighten($body-font-color, 20%);
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0;
+  }
+}
+
+.p-placement {
+  margin: 200px 0 0 0;
+}
+
+.img-top {
+  height: 350px;
+}
+
+.page {
+  margin: 20px 0 40px;
+  text-align: center;
+  @include text(14px);
+  text-align: justify;
+  h3 {
+    font-size: 24px;
+  }
+}
+
+.img-bg {
+  background: #eee url(../img/57H.jpg) no-repeat center center / cover;
+  height: 100%;
+}
+
+.a-img-1 {
+  height: 200px;
+  width: auto;
+}
+
+.a-img-2 {
+  height: 200px;
+  width: 300px;
+}
+
+.skillset {
+  margin: 15px 0 -35px 0;
+  padding: 10px 0 30px 0;
+  background: -webkit-linear-gradient(#e8e5e5, #f4f4f4);
+  background: -o-linear-gradient(#e8e5e5, #f4f4f4);
+  background: -moz-linear-gradient(#e8e5e5, #f4f4f4);
+  background: linear-gradient(#e8e5e5, #f4f4f4);
+}
